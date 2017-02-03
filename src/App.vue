@@ -1,17 +1,38 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+  <div id='app'>
+    <Headers></Headers>
+    <Mains v-bind:changeMusic="changeMusic"></Mains>
+    <MusicBox v-bind:message="res"></MusicBox>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import Headers from './components/Headers'
+import Mains from './components/Mains'
+import MusicBox from './components/MusicBox'
 
 export default {
   name: 'app',
   components: {
-    Hello
+    Headers,
+    Mains,
+    MusicBox
+  },
+  data () {
+    return {
+      res: {
+        'name': '告白气球',
+        'picUrl': 'http://p1.music.126.net/m3_elKryq_x62UNHJ2NgHg==/109951162807555886.jpg',
+        'musicUrl': 'http://m2.music.126.net/GvIMZ5ZW0l04xFMVYtTy8g==/18502581673300022.mp3',
+        'page': 'http://music.163.com/m/song/440241144',
+        'singer': '周二珂'
+      }
+    }
+  },
+  methods: {
+    changeMusic: function (response) {
+      this.res = response
+    }
   }
 }
 </script>
