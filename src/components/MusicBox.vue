@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-show="boxDisplay">
     <h1>{{ message.name }}</h1>
     <img v-bind:src="message.picUrl" alt="">
     <audio v-bind:src="message.musicUrl" controls="controls"></audio>
@@ -9,7 +9,7 @@
 <script>
 export default {
   name: 'MusicBox',
-  props: ['message'],
+  props: ['message', 'boxDisplay'],
   data () {
     return {
       data: 'hello'
@@ -30,9 +30,19 @@ export default {
     height: 70vh;
   }
   img {
-    width: 40vh;
-    height: 40vh;
+    width: 70vw;
+    height: 70vw;
     border-radius: 50%;
     border: 2px #999 solid;
   }
+  audio {
+    width: 80vw;
+    height: 10vw;
+    display: flex;
+    align-items: stretch;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+
 </style>

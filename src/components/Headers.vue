@@ -9,7 +9,7 @@ export default {
   name: 'headers',
   data () {
     return {
-      welcome: 'Welcome to Your Vue.js Music Player.'
+      welcome: 'Welcome to My Vue.js Music Player.'
     }
   },
   methods: {
@@ -19,5 +19,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+h1 {
+  font-size: 3rem;
+}
 
 </style>
