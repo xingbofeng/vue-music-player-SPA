@@ -16,7 +16,8 @@
   "dependencies": {
     "cors": "^2.8.1",
     "vue": "^2.1.0",
-    "vuex": "^2.1.1"
+    "vuex": "^2.1.1",
+    "whatwg-fetch": "^2.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",

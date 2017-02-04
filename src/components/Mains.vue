@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import 'whatwg-fetch'
 export default {
   name: 'mains',
   data () {
@@ -21,7 +22,13 @@ export default {
   props: ['changeMusic', 'listMusic', 'displayList', 'displayBox'],
   methods: {
     getMusicInfos: function () {
-      window.fetch('http://127.0.0.1:3000/', {
+      if (/(\s)/.test(this.musicname) || this.musicname === '') {
+        console.log(this.musicname)
+        window.alert('歌曲名称请不要带有空格')
+        this.musicname = ''
+        return
+      }
+      window.fetch('http://123.206.19.27:3000/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
