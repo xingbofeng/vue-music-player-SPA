@@ -17,5 +17,10 @@ npm start
 ## 界面
 很辣:chicken:
 ~~但是我还是想做坠吼的设计师。~~
+## 赞助
+如果您觉得本项目对您有帮助，请为我续一秒：
+
+![](http://oczira72b.bkt.clouddn.com/mm_facetoface_collect_qrcode_1486357758150.png-200200)
+![](http://oczira72b.bkt.clouddn.com/1486357841032.jpg-200200)
 ## LICENSE
 [MIT LICENSE](./LICENSE)
